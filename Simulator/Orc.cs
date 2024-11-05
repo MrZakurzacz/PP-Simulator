@@ -1,4 +1,10 @@
-﻿namespace Simulator;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Simulator;
 
 public class Orc : Creature
 {
@@ -8,7 +14,7 @@ public class Orc : Creature
     public int Rage
     {
         get => _rage;
-        private set => _rage = Math.Clamp(value, 0, 10);
+        private set => _rage = Validator.Limiter(value, 0, 10);
     }
 
     public Orc(string name = "Unknown", int level = 1, int rage = 0) : base(name, level)
@@ -20,7 +26,7 @@ public class Orc : Creature
 
     public override void SayHi()
     {
-        Console.WriteLine($"Grr! I'm an Orc named {Name} with rage {Rage}.");
+        Console.WriteLine($"Worc worc named {Name} ra(n)ging {Rage}.");
     }
 
     public void Hunt()
@@ -28,9 +34,10 @@ public class Orc : Creature
         _huntCount++;
         if (_huntCount % 2 == 0)
         {
-            Rage = Math.Clamp(Rage + 1, 0, 10);
+            Rage = Validator.Limiter(Rage + 1, 0, 10);
         }
     }
 
     public override int Power => 7 * Level + 3 * Rage;
+    public override string Info => $"{Name} [{Level}][{Rage}]";
 }

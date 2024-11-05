@@ -1,4 +1,10 @@
-﻿namespace Simulator;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Simulator;
 
 public abstract class Creature
 {
@@ -13,29 +19,7 @@ public abstract class Creature
         set
         {
             if (_nameSet) return;
-
-            value = value.Trim();
-
-            if (value.Length < 3)
-            {
-                value = value.PadRight(3, '#');
-            }
-
-            if (value.Length > 25)
-            {
-                value = value.Substring(0, 25).TrimEnd();
-                if (value.Length < 3)
-                {
-                    value = value.PadRight(3, '#');
-                }
-            }
-
-            if (char.IsLower(value[0]))
-            {
-                value = char.ToUpper(value[0]) + value.Substring(1);
-            }
-
-            _name = value;
+            _name = Validator.Shortener(value, 3, 25, '#');
             _nameSet = true;
         }
     }
@@ -46,8 +30,7 @@ public abstract class Creature
         set
         {
             if (_levelSet) return;
-
-            _level = Math.Clamp(value, 1, 10);
+            _level = Validator.Limiter(value, 1, 10);
             _levelSet = true;
         }
     }
@@ -66,9 +49,13 @@ public abstract class Creature
 
     public void Upgrade()
     {
-        if (Level < 10)
-        {
-            Level++;
-        }
+        Level = Validator.Limiter(Level + 1, 1, 10);
+    }
+
+    public abstract string Info { get; }
+
+    public override string ToString()
+    {
+        return $"{GetType().Name.ToUpper()}: {Info}";
     }
 }

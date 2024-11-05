@@ -1,4 +1,10 @@
-﻿namespace Simulator;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Simulator;
 
 public class Elf : Creature
 {
@@ -8,7 +14,7 @@ public class Elf : Creature
     public int Agility
     {
         get => _agility;
-        private set => _agility = Math.Clamp(value, 0, 10);
+        private set => _agility = Validator.Limiter(value, 0, 10);
     }
 
     public Elf(string name = "Unknown", int level = 1, int agility = 0) : base(name, level)
@@ -20,7 +26,7 @@ public class Elf : Creature
 
     public override void SayHi()
     {
-        Console.WriteLine($"Greetings! I'm an Elf named {Name} with agility {Agility}.");
+        Console.WriteLine($"Hi, my name is, what? My name is, who?\r\nMy name is, chka-chka {Name} and i move so good - {Agility}.");
     }
 
     public void Sing()
@@ -28,9 +34,10 @@ public class Elf : Creature
         _singCount++;
         if (_singCount % 3 == 0)
         {
-            Agility = Math.Clamp(Agility + 1, 0, 10);
+            Agility = Validator.Limiter(Agility + 1, 0, 10);
         }
     }
 
     public override int Power => 8 * Level + 2 * Agility;
+    public override string Info => $"{Name} [{Level}][{Agility}]";
 }

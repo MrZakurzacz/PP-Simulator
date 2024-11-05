@@ -1,4 +1,10 @@
-﻿namespace Simulator;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Simulator;
 
 internal class Program
 {
@@ -6,6 +12,7 @@ internal class Program
     {
         Console.WriteLine("Starting Simulator!\n");
         Lab4a();
+        Lab4b();
     }
 
     static void Lab4a()
@@ -38,6 +45,25 @@ internal class Program
         foreach (Creature creature in creatures)
         {
             Console.WriteLine($"{creature.Name,-15}: {creature.Power}");
+        }
+
+        Creature c = new Elf("Elandor", 5, 3);
+        Console.WriteLine(c);  // ELF: Elandor [5]
+    }
+
+    static void Lab4b()
+    {
+        object[] myObjects = {
+            new Animals { Description = "dogs" },
+            new Birds { Description = "  eagles ", Size = 10 },
+            new Elf("e", 15, -3),
+            new Orc("morgash", 6, 4)
+        };
+
+        Console.WriteLine("\nMy objects:");
+        foreach (var o in myObjects)
+        {
+            Console.WriteLine(o);
         }
     }
 }
