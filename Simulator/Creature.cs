@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Simulator;
 
-namespace Simulator;
-
-public class Creature
+public abstract class Creature
 {
     private string _name = "Unknown";
     private int _level = 1;
@@ -66,12 +60,9 @@ public class Creature
 
     public Creature() { }
 
-    public string Info => $"{Name} (Level {Level})";
+    public abstract void SayHi();
 
-    public void SayHi()
-    {
-        Console.WriteLine($"Hi! I'm {Name} at Level {Level}.");
-    }
+    public abstract int Power { get; }
 
     public void Upgrade()
     {
@@ -79,24 +70,5 @@ public class Creature
         {
             Level++;
         }
-    }
-
-    public void Go(Direction direction)
-    {
-        Console.WriteLine($"{Name} goes {direction.ToString().ToLower()}.");
-    }
-
-    public void Go(Direction[] directions)
-    {
-        foreach (var direction in directions)
-        {
-            Go(direction);
-        }
-    }
-
-    public void Go(string directions)
-    {
-        Direction[] parsedDirections = DirectionParser.Parse(directions);
-        Go(parsedDirections);
     }
 }
