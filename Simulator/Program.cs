@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Simulator.Maps;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        Lab5a();
+        Lab5b();
     }
 
     static void Lab4a()
@@ -99,5 +100,55 @@ internal class Program
         Console.WriteLine($"Punkt {p1} po przesunięciu na skos w lewo: {p1.NextDiagonal(Direction.Left)}"); // (0, 2)
         Console.WriteLine($"Punkt {p1} po przesunięciu na skos w dół: {p1.NextDiagonal(Direction.Down)}"); // (0, 0)
         Console.WriteLine($"Punkt {p1} po przesunięciu na skos w prawo: {p1.NextDiagonal(Direction.Right)}"); // (2, 0)
+    }
+    public static void Lab5b()
+    {
+        // test utworzenia mapy o poprawnym rozmiarze (10)
+        try
+        {
+            SmallSquareMap map = new SmallSquareMap(10);
+            Console.WriteLine("Utworzono mapę o rozmiarze: " + map.Size);
+        }
+        catch (ArgumentOutOfRangeException e)
+        {
+            Console.WriteLine("Błąd: " + e.Message);
+        }
+
+        // test utworzenia mapy z niepoprawnym rozmiarem (3)
+        try
+        {
+            SmallSquareMap invalidMap = new SmallSquareMap(3);
+        }
+        catch (ArgumentOutOfRangeException e)
+        {
+            Console.WriteLine("Błąd: " + e.Message);
+        }
+
+        // mapa do testów
+        SmallSquareMap testMap = new SmallSquareMap(5);
+        Point insidePoint = new Point(2, 2); // zakładając że współrzędne takiej mapy to (0, 0) - (Size - 1, Size - 1), oraz (5 < size < 20), niemożliwe jest istnienie punktów ujemnych
+        Point boundaryPoint = new Point(4, 4);
+        Point outsidePoint = new Point(5, 5);
+
+        // test istnienia punktów w mapie
+        Console.WriteLine($"Czy punkt {insidePoint} istnieje na mapie? {testMap.Exist(insidePoint)}");
+        Console.WriteLine($"Czy punkt {boundaryPoint} istnieje na mapie? {testMap.Exist(boundaryPoint)}");
+        Console.WriteLine($"Czy punkt {outsidePoint} istnieje na mapie? {testMap.Exist(outsidePoint)}");
+
+        // test metody Next() wewnątrz mapy
+        Point nextPoint = testMap.Next(insidePoint, Direction.Right);
+        Console.WriteLine($"Następny punkt od {insidePoint} w prawo: {nextPoint}");
+
+        // test metody Next() na granicy mapy (nie powinno wyjść poza mapę)
+        Point nextBoundaryPoint = testMap.Next(boundaryPoint, Direction.Right);
+        Console.WriteLine($"Następny punkt od {boundaryPoint} w prawo: {nextBoundaryPoint}");
+
+        // test metody NextDiagonal() wewnątrz mapy
+        Point nextDiagonalPoint = testMap.NextDiagonal(insidePoint, Direction.Up);
+        Console.WriteLine($"Następny punkt diagonalnie od {insidePoint} w górę: {nextDiagonalPoint}");
+
+        // test metody NextDiagonal() na granicy mapy (nie powinno wyjść poza mapę)
+        Point nextDiagonalBoundaryPoint = testMap.NextDiagonal(boundaryPoint, Direction.Up);
+        Console.WriteLine($"Następny punkt diagonalnie od {boundaryPoint} w górę: {nextDiagonalBoundaryPoint}");
     }
 }
