@@ -18,20 +18,16 @@ internal class Program
     {
         Console.WriteLine("HUNT TEST\n");
         var o = new Orc("Gorbag", rage: 7);
-        o.SayHi();
         for (int i = 0; i < 10; i++)
         {
             o.Hunt();
-            o.SayHi();
         }
 
         Console.WriteLine("\nSING TEST\n");
         var e = new Elf("Legolas", agility: 2);
-        e.SayHi();
         for (int i = 0; i < 10; i++)
         {
             e.Sing();
-            e.SayHi();
         }
 
         Console.WriteLine("\nPOWER TEST\n");

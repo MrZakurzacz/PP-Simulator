@@ -8,6 +8,8 @@ namespace Simulator;
 
 public abstract class Creature
 {
+
+
     private string _name = "Unknown";
     private int _level = 1;
     private bool _nameSet = false;
@@ -23,6 +25,8 @@ public abstract class Creature
             _nameSet = true;
         }
     }
+
+    public abstract string Info { get; }
 
     public int Level
     {
@@ -60,12 +64,4 @@ public abstract class Creature
         return list.ToArray();
     }
     public string[] Go(string directions)=> Go(DirectionParser.Parse(directions));
-}
-public abstract string Info { get; }
-{
-
-    public override string ToString()
-    {
-        return $"{GetType().Name.ToUpper()}: {Info}";
-    }
 }
