@@ -125,10 +125,10 @@ internal class Program
         }
 
         // mapa do testów
-        SmallSquareMap testMap = new SmallSquareMap(5);
-        Point insidePoint = new Point(2, 2); // zakładając że współrzędne takiej mapy to (0, 0) - (Size - 1, Size - 1), oraz (5 < size < 20), niemożliwe jest istnienie punktów ujemnych
-        Point boundaryPoint = new Point(4, 4);
-        Point outsidePoint = new Point(5, 5);
+        SmallSquareMap testMap = new SmallSquareMap(-5); // nalezy odrzucić założenie poniżej bo działa i dla size<0 (oraz |size| spełniające resztę warunków) współrzedne to (0,0),(size+1,size+1)
+        Point insidePoint = new Point(-4, -4); // zakładając że współrzędne takiej mapy to (0, 0) - (Size - 1, Size - 1), oraz (5 < size < 20), niemożliwe jest istnienie punktów ujemnych
+        Point boundaryPoint = new Point(0, 0);
+        Point outsidePoint = new Point(-5, -5);
 
         // test istnienia punktów w mapie
         Console.WriteLine($"Czy punkt {insidePoint} istnieje na mapie? {testMap.Exist(insidePoint)}");
@@ -144,8 +144,8 @@ internal class Program
         Console.WriteLine($"Następny punkt od {boundaryPoint} w prawo: {nextBoundaryPoint}");
 
         // test metody NextDiagonal() wewnątrz mapy
-        Point nextDiagonalPoint = testMap.NextDiagonal(insidePoint, Direction.Up);
-        Console.WriteLine($"Następny punkt diagonalnie od {insidePoint} w górę: {nextDiagonalPoint}");
+        Point nextDiagonalPoint = testMap.NextDiagonal(insidePoint, Direction.Down);
+        Console.WriteLine($"Następny punkt diagonalnie od {insidePoint} w dół: {nextDiagonalPoint}");
 
         // test metody NextDiagonal() na granicy mapy (nie powinno wyjść poza mapę)
         Point nextDiagonalBoundaryPoint = testMap.NextDiagonal(boundaryPoint, Direction.Up);

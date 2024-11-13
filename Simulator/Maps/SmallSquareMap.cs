@@ -8,17 +8,24 @@ namespace Simulator.Maps;
 public class SmallSquareMap : Map
 {
     public int Size;
-
+    private readonly Rectangle Limits;
     public SmallSquareMap(int size)
     {
-        if (size < 5 || size > 20) throw new ArgumentOutOfRangeException("Niepoprawny rozmiar.");
+        if (Math.Abs(size) < 5 || Math.Abs(size) > 20) throw new ArgumentOutOfRangeException("Niepoprawny rozmiar.");
         Size = size;
+        if (size < 0)
+        {
+            Limits = new Rectangle(0, 0, size + 1, size + 1);
+        }
+        else
+        {
+            Limits = new Rectangle(0, 0, size - 1, size - 1);
+        }
     }
 
     public override bool Exist(Point p)
     {
-        if (p.X < 0 || p.Y > Size - 1 || p.X > Size - 1 || p.Y < 0) return false;
-        return true;
+        return Limits.Contains(p);
     }
 
     public override Point Next(Point p, Direction d)
