@@ -24,10 +24,8 @@ public class Orc : Creature
 
     public Orc() { }
 
-    public override void SayHi()
-    {
-        Console.WriteLine($"Worc worc named {Name} ra(n)ging {Rage}.");
-    }
+    public override string Greeting() => $"Worc worc named {Name} ra(n)ging {Rage}.";
+
 
     public void Hunt()
     {

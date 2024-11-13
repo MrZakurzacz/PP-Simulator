@@ -43,7 +43,7 @@ public abstract class Creature
 
     public Creature() { }
 
-    public abstract void SayHi();
+    public abstract string Greeting();
 
     public abstract int Power { get; }
 
@@ -51,8 +51,18 @@ public abstract class Creature
     {
         Level = Validator.Limiter(Level + 1, 1, 10);
     }
+    public string Go(Direction direction) => ($"{Name} goes {direction.ToString().ToLower()}.");
 
-    public abstract string Info { get; }
+    public string[] Go(Direction[] directions)
+    {
+        List<string> list = new List<string>();
+        foreach (var direction in directions) list.Add(Go(direction));
+        return list.ToArray();
+    }
+    public string[] Go(string directions)=> Go(DirectionParser.Parse(directions));
+}
+public abstract string Info { get; }
+{
 
     public override string ToString()
     {

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -24,10 +25,8 @@ public class Elf : Creature
 
     public Elf() { }
 
-    public override void SayHi()
-    {
-        Console.WriteLine($"Hi, my name is, what? My name is, who?\r\nMy name is, chka-chka {Name} and i move so good - {Agility}.");
-    }
+    public override string Greeting() => $"Hi, my name is, what? My name is, who?\r\nMy name is, chka-chka {Name} and i move so good - {Agility}.";
+
 
     public void Sing()
     {
