@@ -98,7 +98,7 @@ internal class Program
         Console.WriteLine($"Punkt {p1} po przesunięciu na skos w prawo: {p1.NextDiagonal(Direction.Right)}"); // (2, 0)
     }
     public static void Lab5b()
-    {
+    {/*
         // test utworzenia mapy o poprawnym rozmiarze (10)
         try
         {
@@ -145,6 +145,6 @@ internal class Program
 
         // test metody NextDiagonal() na granicy mapy (nie powinno wyjść poza mapę)
         Point nextDiagonalBoundaryPoint = testMap.NextDiagonal(boundaryPoint, Direction.Up);
-        Console.WriteLine($"Następny punkt diagonalnie od {boundaryPoint} w górę: {nextDiagonalBoundaryPoint}");
+        Console.WriteLine($"Następny punkt diagonalnie od {boundaryPoint} w górę: {nextDiagonalBoundaryPoint}");*/
     }
 }
