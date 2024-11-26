@@ -1,0 +1,5 @@
+C:\Users\Kuba\Pictures\kms\Runner\obj\Debug\net8.0\Runner.csproj.AssemblyReference.cache
+C:\Users\Kuba\Pictures\kms\Runner\obj\Debug\net8.0\Runner.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kuba\Pictures\kms\Runner\obj\Debug\net8.0\Runner.AssemblyInfoInputs.cache
+C:\Users\Kuba\Pictures\kms\Runner\obj\Debug\net8.0\Runner.AssemblyInfo.cs
+C:\Users\Kuba\Pictures\kms\Runner\obj\Debug\net8.0\Runner.csproj.CoreCompileInputs.cache

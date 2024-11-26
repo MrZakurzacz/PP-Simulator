@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\s-A301-15.CAMPUS.000\\Source\\Repos\\PP-Simulator\\TestSimulator\\TestSimulator.csproj": {}
+    "C:\\Users\\Kuba\\Pictures\\kms\\TestSimulator\\TestSimulator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\s-A301-15.CAMPUS.000\\Source\\Repos\\PP-Simulator\\Simulator\\Simulator.csproj": {
+    "C:\\Users\\Kuba\\Pictures\\kms\\Simulator\\Simulator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\s-A301-15.CAMPUS.000\\Source\\Repos\\PP-Simulator\\Simulator\\Simulator.csproj",
+        "projectUniqueName": "C:\\Users\\Kuba\\Pictures\\kms\\Simulator\\Simulator.csproj",
         "projectName": "Simulator",
-        "projectPath": "C:\\Users\\s-A301-15.CAMPUS.000\\Source\\Repos\\PP-Simulator\\Simulator\\Simulator.csproj",
-        "packagesPath": "C:\\Users\\s-A301-15.CAMPUS.000\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\s-A301-15.CAMPUS.000\\Source\\Repos\\PP-Simulator\\Simulator\\obj\\",
+        "projectPath": "C:\\Users\\Kuba\\Pictures\\kms\\Simulator\\Simulator.csproj",
+        "packagesPath": "C:\\Users\\Kuba\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Kuba\\Pictures\\kms\\Simulator\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\s-A301-15.CAMPUS.000\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Kuba\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -60,21 +64,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\s-A301-15.CAMPUS.000\\Source\\Repos\\PP-Simulator\\TestSimulator\\TestSimulator.csproj": {
+    "C:\\Users\\Kuba\\Pictures\\kms\\TestSimulator\\TestSimulator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\s-A301-15.CAMPUS.000\\Source\\Repos\\PP-Simulator\\TestSimulator\\TestSimulator.csproj",
+        "projectUniqueName": "C:\\Users\\Kuba\\Pictures\\kms\\TestSimulator\\TestSimulator.csproj",
         "projectName": "TestSimulator",
-        "projectPath": "C:\\Users\\s-A301-15.CAMPUS.000\\Source\\Repos\\PP-Simulator\\TestSimulator\\TestSimulator.csproj",
-        "packagesPath": "C:\\Users\\s-A301-15.CAMPUS.000\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\s-A301-15.CAMPUS.000\\Source\\Repos\\PP-Simulator\\TestSimulator\\obj\\",
+        "projectPath": "C:\\Users\\Kuba\\Pictures\\kms\\TestSimulator\\TestSimulator.csproj",
+        "packagesPath": "C:\\Users\\Kuba\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Kuba\\Pictures\\kms\\TestSimulator\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\s-A301-15.CAMPUS.000\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Kuba\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -88,8 +96,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\s-A301-15.CAMPUS.000\\Source\\Repos\\PP-Simulator\\Simulator\\Simulator.csproj": {
-                "projectPath": "C:\\Users\\s-A301-15.CAMPUS.000\\Source\\Repos\\PP-Simulator\\Simulator\\Simulator.csproj"
+              "C:\\Users\\Kuba\\Pictures\\kms\\Simulator\\Simulator.csproj": {
+                "projectPath": "C:\\Users\\Kuba\\Pictures\\kms\\Simulator\\Simulator.csproj"
               }
             }
           }
@@ -142,7 +150,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

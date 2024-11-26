@@ -11,23 +11,25 @@ namespace Simulator.Maps;
 public abstract class Map
 {
     public abstract void Add(Creature creature, Point position);
-    
-        //remove
-        //move
-        //At(x,y)
-        //at(p)
-        //at zwraca zawartość bloku mapy
-    
+    public abstract void Remove(Point point, Creature creature);
+    public abstract void Move(Point from, Point to, Creature creature);
+    public abstract Creature? At(Point point);
+    //remove
+    //move
+    //At(x,y)
+    //at(p)
+    //at zwraca zawartość bloku mapy
+
 
 
     private readonly Rectangle _map;
-    protected Map(int sizeX, int sizeY) 
+    protected Map(int sizeX, int sizeY)
     {
-        if(sizeX<5)
+        if (sizeX < 5)
         {
             throw new ArgumentOutOfRangeException(nameof(sizeX), "Zbyt cienki");
         }
-        if(sizeY < 5)
+        if (sizeY < 5)
         {
             throw new ArgumentOutOfRangeException(nameof(sizeY), "Zbyt krótki");
         }

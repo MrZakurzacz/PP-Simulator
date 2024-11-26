@@ -1,0 +1,5 @@
+C:\Users\Kuba\Pictures\kms\SimConsole\obj\Debug\net8.0\SimConsole.csproj.AssemblyReference.cache
+C:\Users\Kuba\Pictures\kms\SimConsole\obj\Debug\net8.0\SimConsole.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kuba\Pictures\kms\SimConsole\obj\Debug\net8.0\SimConsole.AssemblyInfoInputs.cache
+C:\Users\Kuba\Pictures\kms\SimConsole\obj\Debug\net8.0\SimConsole.AssemblyInfo.cs
+C:\Users\Kuba\Pictures\kms\SimConsole\obj\Debug\net8.0\SimConsole.csproj.CoreCompileInputs.cache

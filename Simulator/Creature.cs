@@ -13,8 +13,10 @@ public abstract class Creature
 
     public void InitMapAndPosition(Map map, Point position)
     {
-
+        Map = map;
+        Position = position;
     }
+
 
 
     private string _name = "Unknown";
@@ -62,19 +64,25 @@ public abstract class Creature
     {
         Level = Validator.Limiter(Level + 1, 1, 10);
     }
-    public string Go(Direction direction) => ($"{direction.ToString().ToLower()}."); // ma użyć reguł mapy
+    public string Go(Direction direction)
+    {
+        var next = Map.Next(Position, direction);
+        if (Map.Exist(next))
+        {
+            Map.Move(Position, next, this);
+            Position = next;
+            return $"Moved {Name} to {next}";
+        }
+        return $"Cannot move {Name} to {next}";
+    }
+    // ma użyć reguł mapy
     //sprawdzić pozycję używająca next, jeśli prawdziwy ruch to aktualizacja Position i powiadomienie mapy przy użyciu move
     //move będzie się składać z remove i add 
     //remove będzie usuwać z mapy
     //add dodawać na mapę
 
     //do usunięcie
-    public string[] Go(Direction[] directions)
-    {
-        List<string> list = new List<string>();
-        foreach (var direction in directions) list.Add(Go(direction));
-        return list.ToArray();
-    }
+
     //do usunięcia
     //public string[] Go(string directions)=> Go(DirectionParser.Parse(directions));
 }
