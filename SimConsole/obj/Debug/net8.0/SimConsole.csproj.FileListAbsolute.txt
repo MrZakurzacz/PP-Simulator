@@ -3,3 +3,13 @@ C:\Users\Kuba\Pictures\kms\SimConsole\obj\Debug\net8.0\SimConsole.GeneratedMSBui
 C:\Users\Kuba\Pictures\kms\SimConsole\obj\Debug\net8.0\SimConsole.AssemblyInfoInputs.cache
 C:\Users\Kuba\Pictures\kms\SimConsole\obj\Debug\net8.0\SimConsole.AssemblyInfo.cs
 C:\Users\Kuba\Pictures\kms\SimConsole\obj\Debug\net8.0\SimConsole.csproj.CoreCompileInputs.cache
+C:\Users\Kuba\Pictures\kms\SimConsole\bin\Debug\net8.0\SimConsole.deps.json
+C:\Users\Kuba\Pictures\kms\SimConsole\bin\Debug\net8.0\SimConsole.dll
+C:\Users\Kuba\Pictures\kms\SimConsole\bin\Debug\net8.0\SimConsole.pdb
+C:\Users\Kuba\Pictures\kms\SimConsole\bin\Debug\net8.0\Simulator.dll
+C:\Users\Kuba\Pictures\kms\SimConsole\bin\Debug\net8.0\Simulator.pdb
+C:\Users\Kuba\Pictures\kms\SimConsole\obj\Debug\net8.0\SimConsole.csproj.Up2Date
+C:\Users\Kuba\Pictures\kms\SimConsole\obj\Debug\net8.0\SimConsole.dll
+C:\Users\Kuba\Pictures\kms\SimConsole\obj\Debug\net8.0\refint\SimConsole.dll
+C:\Users\Kuba\Pictures\kms\SimConsole\obj\Debug\net8.0\SimConsole.pdb
+C:\Users\Kuba\Pictures\kms\SimConsole\obj\Debug\net8.0\ref\SimConsole.dll
