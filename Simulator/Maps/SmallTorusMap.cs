@@ -8,27 +8,10 @@ namespace Simulator.Maps;
 
 public class SmallTorusMap : Map
 {
-    public int Size;
-    private readonly Rectangle Limits;
-    public SmallTorusMap(int size)
-{
-        if (Math.Abs(size) < 5 || Math.Abs(size) > 20) throw new ArgumentOutOfRangeException("Niepoprawny rozmiar.");
-        Size = size;
-        if (size < 0)
+    public SmallTorusMap(int Size) : base(Size, Size)
     {
-            Limits = new Rectangle(0, 0, size + 1, size + 1);
-        }
-        else
-    {
-            Limits = new Rectangle(0, 0, size - 1, size - 1);
-        }
-    }
 
-    public override bool Exist(Point p)
-{
-        return Limits.Contains(p);
     }
-
     public override Point Next(Point p, Direction d)
     {
         var next = p.Next(d);

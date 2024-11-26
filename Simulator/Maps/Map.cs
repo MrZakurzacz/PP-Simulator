@@ -10,12 +10,40 @@ namespace Simulator.Maps;
 /// </summary>
 public abstract class Map
 {
+    public abstract void Add(Creature creature, Point position);
+    
+        //remove
+        //move
+        //At(x,y)
+        //at(p)
+        //at zwraca zawartość bloku mapy
+    
+
+
+    private readonly Rectangle _map;
+    protected Map(int sizeX, int sizeY) 
+    {
+        if(sizeX<5)
+        {
+            throw new ArgumentOutOfRangeException(nameof(sizeX), "Zbyt cienki");
+        }
+        if(sizeY < 5)
+        {
+            throw new ArgumentOutOfRangeException(nameof(sizeY), "Zbyt krótki");
+        }
+        SizeX = sizeX;
+        SizeY = sizeY;
+        _map = new Rectangle(0, 0, SizeX - 1, SizeY - 1);
+    }
+    public int SizeX { get; }
+
+    public int SizeY { get; }
     /// <summary>
     /// Check if give point belongs to the map.
     /// </summary>
     /// <param name="p">Point to check.</param>
     /// <returns></returns>
-    public abstract bool Exist(Point p);
+    public virtual bool Exist(Point p) => _map.Contains(p);
 
     /// <summary>
     /// Next position to the point in a given direction.
