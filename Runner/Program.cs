@@ -9,7 +9,7 @@ static class Program
         Console.OutputEncoding = Encoding.UTF8;
 
         SmallMap map = new SmallTorusMap(6);
-        List<Creature> creatures = new List<Creature> { new Orc("Gorbag"), new Elf("Elandor") };
+        List<IMappable> creatures = new List<IMappable> { new Orc("Gorbag"), new Elf("Elandor") };
         List<Point> points = new List<Point> { new Point(2, 2), new Point(3, 1) };
         string moves = "dlrludl";
 
@@ -20,7 +20,7 @@ static class Program
         while (!simulation.Finished)
         {
             mapVisualizer.Draw();
-            Console.WriteLine($"Tura: {simulation.CurrentCreature.Name}, Ruch: {simulation.CurrentMoveName}");
+           // Console.WriteLine($"Tura: {simulation.Currentmappable.Name}, Ruch: {simulation.CurrentMoveName}");//
             Console.ReadKey();
             simulation.Turn();
         }
