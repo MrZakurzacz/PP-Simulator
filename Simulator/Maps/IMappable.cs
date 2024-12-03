@@ -13,4 +13,7 @@ public interface IMappable
     string Name { get; }
 
     void InitMapAndPosition(Map map, Point position);
+
+    
+    string Go(Direction direction);
 }

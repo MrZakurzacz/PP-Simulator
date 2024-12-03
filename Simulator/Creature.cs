@@ -80,9 +80,5 @@ public abstract class Creature : IMappable
     //move będzie się składać z remove i add 
     //remove będzie usuwać z mapy
     //add dodawać na mapę
-
-    //do usunięcie
-
-    //do usunięcia
     //public string[] Go(string directions)=> Go(DirectionParser.Parse(directions));
 }

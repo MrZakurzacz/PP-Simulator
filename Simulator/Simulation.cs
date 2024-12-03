@@ -59,27 +59,10 @@ public class Simulation
 
     public void Turn()
     {
-        if (Finished)
-        {
-            throw new InvalidOperationException("Symulacja została już zakończona.");
-        }
-
-        var currentCreature = CurrentCreature;
+        if (Finished) throw new InvalidOperationException("Simulation's already finished");
         var currentMove = _parsedMoves[_currentTurn % _parsedMoves.Count];
-
-        var currentPosition = currentCreature.Position;
-        var nextPosition = Map.Next(currentPosition, currentMove);
-
-        // Wykonujemy ruch tylko, jeśli punkt docelowy jest na mapie
-        if (Map.Exist(nextPosition))
-        {
-            Map.Move(currentPosition, nextPosition, currentCreature);
-            currentCreature.InitMapAndPosition(Map, nextPosition);
-        }
-
+        CurrentCreature.Go(currentMove);
         _currentTurn++;
-
-        // Sprawdzamy, czy wszystkie ruchy zostały wykonane
         if (_currentTurn >= _parsedMoves.Count * Creatures.Count)
         {
             Finished = true;

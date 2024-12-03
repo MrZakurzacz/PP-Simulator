@@ -32,10 +32,12 @@ public class MapVisualizer
                 {
                     null => ' ', // Puste pole
                     { Count: 0 } => ' ', // Puste pole
-                    { Count: 1 } => creatures[0] switch
+                    { Count: 1 } => (IMappable)creatures[0] switch
                     {
                         Orc => 'O', // Ork
-                        Elf => 'E', // Elf
+                        Elf => 'E', // Elfy
+                        Birds => 'B', // Ptaki
+                        Animals => 'A', // Zwierzęta
                         _ => '?',   // Nieznane stworzenie
                     },
                     _ => 'X' // Pole zajęte przez więcej niż jedno stworzenie
@@ -90,8 +92,8 @@ public class MapVisualizer
         return border.ToString();
     }
 
-    private List<Creature>? GetCreaturesAt(int x, int y)
+    private List<IMappable>? GetCreaturesAt(int x, int y)
     {
-        return _map.At(new Point(x, y)) is Creature creature ? new List<Creature> { creature } : null;
+        return _map.At(new Point(x, y)) is IMappable creature ? new List<IMappable> { creature } : null;
     }
 }

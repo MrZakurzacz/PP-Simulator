@@ -2,7 +2,7 @@
 using Simulator;
 using System.Text;
 
-static class Program
+/*static class Program
 {
     static void Main(string[] args)
     {
@@ -29,3 +29,5 @@ static class Program
         Console.WriteLine("Symulacja zakończona!");
     }
 }
+//śmierć brzmi jak najlepsza opcja
+*/

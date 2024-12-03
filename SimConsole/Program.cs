@@ -8,10 +8,17 @@ static class Program
     {
         Console.OutputEncoding = Encoding.UTF8;
 
-        SmallMap map = new SmallTorusMap(6);
-        List<IMappable> creatures = new List<IMappable> { new Orc("Gorbag"), new Elf("Elandor") };
-        List<Point> points = new List<Point> { new Point(2, 2), new Point(3, 1) };
-        string moves = "dlrludl";
+        SmallMap map = new SmallTorusMap(8,6);
+        List<IMappable> creatures = 
+        [
+            new Orc("Gorbag"),
+            new Elf("Elandor"),
+            new Animals { Description = "Króliki", Size = 10},
+            new Birds {Description = "Orły", Size = 10, CanFly = true},
+            new Birds {Description = "Strusie", Size = 8, CanFly = false}
+        ];
+        List<Point> points = [new(2, 2), new(3, 1), new(4, 2), new(3, 5), new(3, 3)];
+        string moves = "dlrludllrlrdurldurllldddurrr";
 
 
         Simulation simulation = new Simulation(map, creatures, points, moves);
@@ -25,6 +32,9 @@ static class Program
             Console.ReadKey();
             simulation.Turn();
         }
+
+
+        //śmierć brzmi jak najlepsza opcja
 
         mapVisualizer.Draw();
         Console.WriteLine("Symulacja zakończona!");
