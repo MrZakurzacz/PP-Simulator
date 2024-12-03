@@ -9,7 +9,7 @@ namespace Simulator.Maps;
 
 public abstract class SmallMap : Map
 {
-    List<Creature>?[,] _fields;
+    List<IMappable>?[,] _fields;
     public SmallMap(int sizeX, int sizeY) : base(sizeX, sizeY)
     {
         if (sizeX > 20)
@@ -20,7 +20,7 @@ public abstract class SmallMap : Map
         {
             throw new ArgumentOutOfRangeException(nameof(sizeY), "Zbyt dlugi");
         }
-        _fields = new List<Creature>?[sizeX, sizeY];
+        _fields = new List<IMappable>?[sizeX, sizeY];
     }
     //add, remove, at...
     //add - dodaje stworzenie na mapie
@@ -28,7 +28,7 @@ public abstract class SmallMap : Map
     //at - zwraca stworzenie/a z mapy
 
     //dodanie stworzenia na mapie
-    public override void Add(Creature creature, Point position)
+    public override void Add(IMappable creature, Point position)
     {
         if (!Exist(position))
         {
@@ -36,12 +36,12 @@ public abstract class SmallMap : Map
         }
         if (_fields[position.X, position.Y] == null)
         {
-            _fields[position.X, position.Y] = new List<Creature>();
+            _fields[position.X, position.Y] = new List<IMappable>();
         }
         _fields[position.X, position.Y].Add(creature);
     }
     //usunięcie stworzenia z mapy
-    public override void Remove(Point point, Creature creature)
+    public override void Remove(Point point, IMappable creature)
     {
         if (!Exist(point))
         {
@@ -53,7 +53,7 @@ public abstract class SmallMap : Map
         }
         _fields[point.X, point.Y].Remove(creature);
     }
-    public override void Move(Point from, Point to, Creature creature)
+    public override void Move(Point from, Point to, IMappable creature)
     {
         if (!Exist(from) || !Exist(to))
         {
@@ -68,7 +68,7 @@ public abstract class SmallMap : Map
     }
 
     //zwrócenie stworzenia z mapy
-    public override Creature? At(Point point)
+    public override IMappable? At(Point point)
     {
         return _fields[point.X, point.Y]?.FirstOrDefault();
     }

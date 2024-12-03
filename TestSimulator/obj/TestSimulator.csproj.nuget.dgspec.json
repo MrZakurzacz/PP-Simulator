@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kuba\\Pictures\\kms\\TestSimulator\\TestSimulator.csproj": {}
+    "C:\\aPP-Simulator\\TestSimulator\\TestSimulator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kuba\\Pictures\\kms\\Simulator\\Simulator.csproj": {
+    "C:\\aPP-Simulator\\Simulator\\Simulator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kuba\\Pictures\\kms\\Simulator\\Simulator.csproj",
+        "projectUniqueName": "C:\\aPP-Simulator\\Simulator\\Simulator.csproj",
         "projectName": "Simulator",
-        "projectPath": "C:\\Users\\Kuba\\Pictures\\kms\\Simulator\\Simulator.csproj",
+        "projectPath": "C:\\aPP-Simulator\\Simulator\\Simulator.csproj",
         "packagesPath": "C:\\Users\\Kuba\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kuba\\Pictures\\kms\\Simulator\\obj\\",
+        "outputPath": "C:\\aPP-Simulator\\Simulator\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -68,14 +68,14 @@
         }
       }
     },
-    "C:\\Users\\Kuba\\Pictures\\kms\\TestSimulator\\TestSimulator.csproj": {
+    "C:\\aPP-Simulator\\TestSimulator\\TestSimulator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kuba\\Pictures\\kms\\TestSimulator\\TestSimulator.csproj",
+        "projectUniqueName": "C:\\aPP-Simulator\\TestSimulator\\TestSimulator.csproj",
         "projectName": "TestSimulator",
-        "projectPath": "C:\\Users\\Kuba\\Pictures\\kms\\TestSimulator\\TestSimulator.csproj",
+        "projectPath": "C:\\aPP-Simulator\\TestSimulator\\TestSimulator.csproj",
         "packagesPath": "C:\\Users\\Kuba\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kuba\\Pictures\\kms\\TestSimulator\\obj\\",
+        "outputPath": "C:\\aPP-Simulator\\TestSimulator\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -96,8 +96,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Kuba\\Pictures\\kms\\Simulator\\Simulator.csproj": {
-                "projectPath": "C:\\Users\\Kuba\\Pictures\\kms\\Simulator\\Simulator.csproj"
+              "C:\\aPP-Simulator\\Simulator\\Simulator.csproj": {
+                "projectPath": "C:\\aPP-Simulator\\Simulator\\Simulator.csproj"
               }
             }
           }

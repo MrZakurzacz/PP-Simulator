@@ -8,7 +8,7 @@ namespace Simulator;
 public class Simulation
 {
     public Map Map { get; }
-    public List<Creature> Creatures { get; }
+    public List<IMappable> Creatures { get; }
     public List<Point> Positions { get; }
     public string Moves { get; }
     public bool Finished { get; private set; } = false;
@@ -16,11 +16,13 @@ public class Simulation
     private int _currentTurn = 0; // Zlicza wykonane tury, obsługuje cykliczność ruchów.
     private readonly List<Direction> _parsedMoves;
 
-    public Creature CurrentCreature => Creatures[_currentTurn % Creatures.Count];
+    public IMappable CurrentCreature => Creatures[_currentTurn % Creatures.Count];
 
     public string CurrentMoveName => _parsedMoves[_currentTurn % _parsedMoves.Count].ToString().ToLower();
 
-    public Simulation(Map map, List<Creature> creatures, List<Point> positions, string moves)
+    public object CurrentIMappable { get; set; }
+
+    public Simulation(Map map, List<IMappable> creatures, List<Point> positions, string moves)
     {
         if (creatures == null || creatures.Count == 0)
         {

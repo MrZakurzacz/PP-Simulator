@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TRCyGlYDF2y5uy/2+gbmQLKNU3uO1PMNCGEhtB5kFNOrjScaiHo1zoVjFoCXuZlEZ//q3JW1u4xP9bnB5LLJXQ==",
+  "dgSpecHash": "P4y25KEAtPXTCVYlTUfKu0ysCjcP14YuXBy2vivetfV1e179y0L8kMehttJfeSWlEdHSH1qw/BQqr7R/T7enHw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Kuba\\Pictures\\kms\\TestSimulator\\TestSimulator.csproj",
+  "projectFilePath": "C:\\aPP-Simulator\\TestSimulator\\TestSimulator.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kuba\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
     "C:\\Users\\Kuba\\.nuget\\packages\\microsoft.codecoverage\\17.8.0\\microsoft.codecoverage.17.8.0.nupkg.sha512",

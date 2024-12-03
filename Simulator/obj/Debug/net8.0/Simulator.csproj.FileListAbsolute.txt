@@ -9,3 +9,15 @@ C:\Users\Kuba\Pictures\kms\Simulator\obj\Debug\net8.0\Simulator.dll
 C:\Users\Kuba\Pictures\kms\Simulator\obj\Debug\net8.0\refint\Simulator.dll
 C:\Users\Kuba\Pictures\kms\Simulator\obj\Debug\net8.0\Simulator.pdb
 C:\Users\Kuba\Pictures\kms\Simulator\obj\Debug\net8.0\ref\Simulator.dll
+C:\aPP-Simulator\Simulator\bin\Debug\net8.0\Simulator.deps.json
+C:\aPP-Simulator\Simulator\bin\Debug\net8.0\Simulator.dll
+C:\aPP-Simulator\Simulator\bin\Debug\net8.0\Simulator.pdb
+C:\aPP-Simulator\Simulator\obj\Debug\net8.0\Simulator.GeneratedMSBuildEditorConfig.editorconfig
+C:\aPP-Simulator\Simulator\obj\Debug\net8.0\Simulator.AssemblyInfoInputs.cache
+C:\aPP-Simulator\Simulator\obj\Debug\net8.0\Simulator.AssemblyInfo.cs
+C:\aPP-Simulator\Simulator\obj\Debug\net8.0\Simulator.csproj.CoreCompileInputs.cache
+C:\aPP-Simulator\Simulator\obj\Debug\net8.0\Simulator.sourcelink.json
+C:\aPP-Simulator\Simulator\obj\Debug\net8.0\Simulator.dll
+C:\aPP-Simulator\Simulator\obj\Debug\net8.0\refint\Simulator.dll
+C:\aPP-Simulator\Simulator\obj\Debug\net8.0\Simulator.pdb
+C:\aPP-Simulator\Simulator\obj\Debug\net8.0\ref\Simulator.dll

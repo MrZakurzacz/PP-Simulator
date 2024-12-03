@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kuba\\Pictures\\kms\\Simulator\\Simulator.csproj",
+      "projectUniqueName": "C:\\aPP-Simulator\\Simulator\\Simulator.csproj",
       "projectName": "Simulator",
-      "projectPath": "C:\\Users\\Kuba\\Pictures\\kms\\Simulator\\Simulator.csproj",
+      "projectPath": "C:\\aPP-Simulator\\Simulator\\Simulator.csproj",
       "packagesPath": "C:\\Users\\Kuba\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kuba\\Pictures\\kms\\Simulator\\obj\\",
+      "outputPath": "C:\\aPP-Simulator\\Simulator\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
