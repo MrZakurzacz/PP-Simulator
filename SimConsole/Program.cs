@@ -17,8 +17,8 @@ static class Program
             new Birds {Description = "Orły", Size = 10, CanFly = true},
             new Birds {Description = "Strusie", Size = 8, CanFly = false}
         ];
-        List<Point> points = [new(2, 2), new(3, 1), new(4, 2), new(3, 5), new(3, 3)];
-        string moves = "dlrludllrlrdurldurllldddurrr";
+        List<Point> points = [new(2, 2), new(3, 1), new(1, 2), new(3, 0), new(3, 2)];
+        string moves = "dlrldurdurlllddrrudllrlrdurl";
 
 
         Simulation simulation = new Simulation(map, creatures, points, moves);
