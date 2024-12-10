@@ -8,7 +8,7 @@ static class Program
     {
         Console.OutputEncoding = Encoding.UTF8;
 
-        SmallMap map = new SmallTorusMap(8,6);
+        BigBounceMap map = new(8, 6);
         List<IMappable> creatures = 
         [
             new Orc("Gorbag"),
@@ -17,8 +17,8 @@ static class Program
             new Birds {Description = "Orły", Size = 10, CanFly = true},
             new Birds {Description = "Strusie", Size = 8, CanFly = false}
         ];
-        List<Point> points = [new(2, 2), new(3, 1), new(1, 2), new(3, 0), new(3, 2)];
-        string moves = "dlrldurdurlllddrrudllrlrdurl";
+        List<Point> points = [new(0, 0), new(7, 5), new(2, 2), new(5, 5), new(4, 1)];
+        string moves = "lrduuulrdduullrdrrud";
 
 
         Simulation simulation = new Simulation(map, creatures, points, moves);

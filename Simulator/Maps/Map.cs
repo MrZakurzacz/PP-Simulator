@@ -22,7 +22,7 @@ public abstract class Map
 
 
 
-    private readonly Rectangle _map;
+    protected readonly Rectangle _map;
     protected Map(int sizeX, int sizeY)
     {
         if (sizeX < 5)
