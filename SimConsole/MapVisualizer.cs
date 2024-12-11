@@ -1,24 +1,29 @@
-﻿using Simulator;
+﻿using SimConsole;
+using Simulator;
 using Simulator.Maps;
 using System;
+using System.Security.Authentication;
 using System.Text;
 
 public class MapVisualizer
 {
     private readonly Map _map;
+    private readonly SimulationHistory _history;
 
-    public MapVisualizer(Map map)
+    public MapVisualizer(Map map, SimulationHistory history)
     {
         _map = map;
+        _history = history;
     }
 
+    SimulationHistory history = new SimulationHistory();
     public void Draw()
     {
         Console.Clear();
         int width = _map.SizeX;
         int height = _map.SizeY;
-
-        Console.WriteLine(BuildTopBorder(width));
+        string rysunekmapy = BuildTopBorder(width) + "\n";
+        //Console.WriteLine(BuildTopBorder(width));
 
         for (int y = 0; y < height; y++)
         {
@@ -46,15 +51,21 @@ public class MapVisualizer
                 row.Append($" {symbol} ");
                 row.Append(Box.Vertical);
             }
-
-            Console.WriteLine(row.ToString());
+            rysunekmapy += row.ToString() + "\n";
+            //Console.WriteLine(row.ToString());
 
             if (y < height - 1)
-                Console.WriteLine(BuildMidBorder(width));
-        }
 
-        Console.WriteLine(BuildBottomBorder(width));
+                rysunekmapy += BuildMidBorder(width) + "\n";
+            //Console.WriteLine(BuildMidBorder(width));
+        }
+        rysunekmapy += BuildBottomBorder(width) + "\n";
+        //Console.WriteLine(BuildBottomBorder(width));
+
+        _history.PamiecMapEntry(rysunekmapy);
+        Console.Write(rysunekmapy);
     }
+
 
     private string BuildTopBorder(int width)
     {

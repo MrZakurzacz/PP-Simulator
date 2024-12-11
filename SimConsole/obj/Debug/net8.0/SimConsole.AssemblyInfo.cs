@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SimConsole")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0ffff646956428b6db8d997ab082a648d3c9328b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+78695d11a508a8165cb7eafbffa7c163c0aad8e7")]
 [assembly: System.Reflection.AssemblyProductAttribute("SimConsole")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SimConsole")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
