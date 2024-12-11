@@ -48,7 +48,7 @@ static class Program
 
 
 
-        //najlepsza muzyka do programowania: https://youtu.be/RP4cD35Xn5E
+        //najlepsza muzyka do programowania!: https://youtu.be/RP4cD35Xn5E
 
         mapVisualizer.Draw();
         Console.WriteLine("Symulacja zakończona!");
