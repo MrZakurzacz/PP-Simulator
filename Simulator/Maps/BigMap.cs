@@ -55,21 +55,6 @@ namespace Simulator.Maps
             }
         }
 
-        public override void Move(Point from, Point to, IMappable creature)
-        {
-            if (!Exist(from) || !Exist(to))
-            {
-                throw new ArgumentOutOfRangeException("One or both points are outside the map.");
-            }
-
-            if (!_fields.TryGetValue(from, out var creatures) || !creatures.Contains(creature))
-            {
-                throw new InvalidOperationException("The creature is not at the starting position.");
-            }
-
-            Remove(from, creature);
-            Add(creature, to);
-        }
 
         public override IMappable? At(Point point)
         {

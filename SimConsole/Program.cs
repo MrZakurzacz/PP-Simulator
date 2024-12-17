@@ -11,6 +11,8 @@ static class Program
         
         Console.OutputEncoding = Encoding.UTF8;
 
+        List<SimulationTurnLog> list = new List<SimulationTurnLog>();
+
         BigBounceMap map = new(8, 6);
         List<IMappable> creatures = 
         [
@@ -25,42 +27,27 @@ static class Program
 
 
         Simulation simulation = new Simulation(map, creatures, points, moves);
-        SimulationHistory history = new SimulationHistory();
-        MapVisualizer mapVisualizer = new MapVisualizer(simulation.Map, history);
+        SimulationHistory history = new SimulationHistory(simulation);
+        LogVisualizer mapVisualizer = new LogVisualizer(history);
 
 
 
         Console.WriteLine("Symulacja startuje. Naciśnij dowolny klawisz, aby przejść do kolejnej tury...");
-        while (!simulation.Finished)
+        for (int turn = 0; turn < moves.Count(); turn++) //history.TurnLogs.Count
         {
-            mapVisualizer.Draw();
-
-            string cosiedzieje = $"Tura: {simulation.CurrentCreature.Name}, Ruch: {simulation.CurrentMoveName}";
-            history.GarnekEntry(cosiedzieje);
-            Console.WriteLine(cosiedzieje);
-
-
-            //Console.WriteLine($"Tura: {simulation.CurrentCreature.Name}, Ruch: {simulation.CurrentMoveName}");
+            mapVisualizer.Draw(turn);
             Console.ReadKey();
-
-            simulation.Turn();
         }
 
 
 
         //najlepsza muzyka do programowania!: https://youtu.be/RP4cD35Xn5E
+        //8 godzin to dużo, ale warto posłuchać chociaż kilka minut
 
-        mapVisualizer.Draw();
-        Console.WriteLine("Symulacja zakończona!");
-        Console.ReadKey();
-        history.PrintHistory(6);
-        Console.ReadKey();
-        history.PrintHistory(11);
-        Console.ReadKey();
-        history.PrintHistory(16);
-        Console.ReadKey();
-        history.PrintHistory(21);
-        Console.ReadKey();
+        //mam rozdwojenie jaźni
+
+
+
         Console.WriteLine("Historia symulacji zakończona!");
 
     }

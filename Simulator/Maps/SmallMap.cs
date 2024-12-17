@@ -53,19 +53,7 @@ public abstract class SmallMap : Map
         }
         _fields[point.X, point.Y].Remove(creature);
     }
-    public override void Move(Point from, Point to, IMappable creature)
-    {
-        if (!Exist(from) || !Exist(to))
-        {
-            throw new ArgumentOutOfRangeException("Punkt poza mapą.");
-        }
-        if (_fields[from.X, from.Y] == null || !_fields[from.X, from.Y].Contains(creature))
-        {
-            throw new InvalidOperationException("Stworzenie nie znajduje się na początkowej pozycji.");
-        }
-        Remove(from, creature);
-        Add(creature, to);
-    }
+
 
     //zwrócenie stworzenia z mapy
     public override IMappable? At(Point point)

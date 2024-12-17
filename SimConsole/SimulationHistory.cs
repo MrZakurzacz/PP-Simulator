@@ -11,24 +11,40 @@ namespace SimConsole;
 
 public class SimulationHistory
 {
-    private List<string> history = new List<string>();
-    private List<string> pamiecmap = new List<string>();
+    private Simulation _simulation { get; }
+    public int SizeX { get; }
+    public int SizeY { get; }
+    public List<SimulationTurnLog> TurnLogs { get; } = [];
+    // store starting positions at index 0
 
-    public void GarnekEntry(string entry)
+    public SimulationHistory(Simulation simulation)
     {
-        history.Add(entry);
+        _simulation = simulation ??
+            throw new ArgumentNullException(nameof(simulation));
+        SizeX = _simulation.Map.SizeX;
+        SizeY = _simulation.Map.SizeY;
+        Run();
     }
-    public void PamiecMapEntry(string entry)
+
+    private void Run()
     {
-        pamiecmap.Add(entry);
-    }
-    public void PrintHistory(int numerTury)
-    {
-        string historyEntry = history[numerTury];
-        string pamiecmapEntry = pamiecmap[numerTury];
-        Console.Clear();
-        Console.WriteLine($"Tura {numerTury-1}");
-        Console.WriteLine(pamiecmapEntry);
-        Console.WriteLine(historyEntry);
+        while (!_simulation.Finished)
+        {
+            var simps = new Dictionary<Point, char>();
+            foreach (var symb in _simulation.Creatures)
+            {
+                if (simps.ContainsKey(symb.Position)) simps[symb.Position] = 'X';
+                else simps.Add(symb.Position, LogVisualizer.symbols(symb));
+            }
+            TurnLogs.Add(new SimulationTurnLog()
+            {
+
+                Mappable = _simulation.CurrentCreature.ToString(),
+                Move = _simulation.CurrentMoveName,
+                Symbols = simps
+            });
+
+            _simulation.Turn();
+        }
     }
 }

@@ -12,7 +12,6 @@ public abstract class Map
 {
     public abstract void Add(IMappable creature, Point position);
     public abstract void Remove(Point point, IMappable creature);
-    public abstract void Move(Point from, Point to, IMappable creature);
     public abstract IMappable? At(Point point);
     //remove
     //move
@@ -21,6 +20,17 @@ public abstract class Map
     //at zwraca zawartość bloku mapy
 
 
+    public void Move(Point from, Point to, IMappable creature)
+    {
+        if (!Exist(from) || !Exist(to))
+        {
+            throw new ArgumentOutOfRangeException("One or both points are outside the map.");
+        }
+        
+
+        Remove(from, creature);
+        Add(creature, to);
+    }
 
     protected readonly Rectangle _map;
     protected Map(int sizeX, int sizeY)
