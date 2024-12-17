@@ -43,8 +43,9 @@ static class Program
 
         //najlepsza muzyka do programowania!: https://youtu.be/RP4cD35Xn5E
         //8 godzin to dużo, ale warto posłuchać chociaż kilka minut
-
+        //^^ zgadzam się z komentarzem powyżej ^^
         //mam rozdwojenie jaźni
+        //ps pozdrawiam UwU
 
 
 
